@@ -3,6 +3,8 @@ from db import mysql
 
 contacts = Blueprint('contacts', __name__, template_folder='app/templates')
 
+def get_db_connection():
+    return mysql.connection
 
 @contacts.route('/')
 def Index():
